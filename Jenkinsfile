@@ -49,8 +49,4 @@ node {
     stage('Docker build') {
         sh 'docker build -t example-app."${BUILD_ID}" .'
     }
-
-    stage('run container') {
-        sh './startup.sh'
-    }
 }

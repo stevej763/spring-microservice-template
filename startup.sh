@@ -4,12 +4,11 @@
 ./start-vault.sh
 
 # package app to compile any changes
-mvn package -Dspring.profiles.active=docker
-sleep 1
+mvn package -Dspring.profiles.active=docker -DskipTests=true
 
 # build docker image
 docker build -t example-app:latest .
+docker build -t example-lb -f loadBalancer/Dockerfile .
 
-sleep 1
 # start docker compose stack
 docker compose up

@@ -33,5 +33,4 @@ public class ExampleRestEndpoint {
         ExampleDataDto coreResponse = coreService.postData(new ExampleDto(request.text()));
         return ResponseEntity.ok("Example POST rest endpoint response: " + coreResponse);
     }
-
 }

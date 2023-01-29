@@ -40,7 +40,7 @@
         </dependency>
         <dependency>
             <groupId>com.steve</groupId>
-            <artifactId>rest</artifactId>
+            <artifactId>api</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
