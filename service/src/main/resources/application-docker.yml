@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: example-app
+  config:
+    import: vault://
+  cloud:
+    vault:
+      token: ${VAULT_TOKEN}
+      scheme: http
+      host: ${VAULT_HOST}
+      kv:
+        default-context:
+        profile-separator: /
+        backend: ${VAULT_BACKEND}
+        enabled: true
+
+mongo:
+  database: example-db
+  host: ${MONGO_HOST}
+  port: ${MONGO_PORT}

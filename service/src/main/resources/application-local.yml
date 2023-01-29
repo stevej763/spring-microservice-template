@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: example-app
+  config:
+    import: vault://
+  cloud:
+    vault:
+      token: password
+      scheme: http
+      host: localhost
+      kv:
+        default-context:
+        profile-separator: /
+        backend: secret123
+        enabled: true
+
+mongo:
+  database: exampledb
+  host: localhost
+  port: 27017

@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+
+
+
+  app:
+    image: example-app
+    container_name: "example-app"
+    ports:
+      - "8080:8080"
+    links:
+      - "adhoc-mongo:adhoc-mongo"
+    environment:
+      MONGO_DATABASE: "exampleappdb"
+      VAULT_TOKEN: "password"
+      VAULT_HOST: "host.docker.internal"
+      VAULT_BACKEND: "example"
+    networks:
+      - example-net
+
+  adhoc-mongo:
+    image: "mongo:latest"
+    container_name: "adhoc-mongo"
+    ports:
+      - "27019:27017"
+    networks:
+      - example-net
+
+networks:
+  example-net: { }
