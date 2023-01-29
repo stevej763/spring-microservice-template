@@ -8,7 +8,6 @@ public class CoreService {
 
     public CoreService(ExampleRepositoryAdapter exampleRepositoryAdapter) {
         this.exampleRepositoryAdapter = exampleRepositoryAdapter;
-        System.out.println("Core service constructed");
     }
 
     public String getData() {

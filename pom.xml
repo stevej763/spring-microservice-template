@@ -30,19 +30,6 @@
         <spring.parent.version>3.0.2</spring.parent.version>
     </properties>
 
-    <profiles>
-        <!--Your default profile... selected if none specified-->
-        <profile>
-            <id>default</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <activeProfile>local</activeProfile>
-            </properties>
-        </profile>
-    </profiles>
-
     <build>
         <plugins>
             <plugin>
